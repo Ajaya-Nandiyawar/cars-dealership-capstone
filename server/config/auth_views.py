@@ -146,10 +146,14 @@ class LogoutView(APIView):
     POST /api/auth/logout/
     Terminates current user session.
     """
+    authentication_classes = []
+    permission_classes = []
 
     def post(self, request):
-        username = request.user.username if request.user.is_authenticated else ""
-        logout(request)
+        # Access underlying request for session termination
+        req = getattr(request, "_request", request)
+        username = req.user.username if hasattr(req, "user") and req.user.is_authenticated else ""
+        logout(req)
         return Response(
             {
                 "status": "success",
@@ -159,8 +163,8 @@ class LogoutView(APIView):
         )
 
     def get(self, request):
-        # Also support GET logout for browser convenience
-        logout(request)
+        req = getattr(request, "_request", request)
+        logout(req)
         return Response(
             {"status": "success", "message": "Logged out successfully."},
             status=status.HTTP_200_OK,
