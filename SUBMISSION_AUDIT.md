@@ -18,14 +18,13 @@ This document provides a comprehensive verification audit and mapping matrix for
 ## 📋 Comprehensive 28-Task Assessment Mapping Matrix
 
 | Task # | Assignment Requirement | Required Evidence Type | Exact Evidence File / URL | Verification Status | Action Remaining |
-|---|---|---|---|---|---|
-| **Task 1** | README and project details | GitHub Public URL | `https://github.com/<owner>/<repo>/blob/main/README.md` | **Verified Ready** | Push local git repo to your GitHub account |
+| **Task 1** | README and project details | GitHub Public URL | `https://github.com/Ajaya-Nandiyawar/cars-dealership-capstone/blob/main/README.md` | **VERIFIED (Live Public)** | None. Published and verified. |
 | **Task 2** | Django server running | Text output | `submission_evidence/commands/django_server.txt` | **VERIFIED (HTTP 200)** | None. Real cURL output captured. |
-| **Task 3** | About Us static page | GitHub Public URL | `https://github.com/<owner>/<repo>/blob/main/server/frontend/static/About.html` | **Verified Ready** | Push to GitHub repository |
-| **Task 4** | Contact Us static page | GitHub Public URL | `https://github.com/<owner>/<repo>/blob/main/server/frontend/static/Contact.html` | **Verified Ready** | Push to GitHub repository |
+| **Task 3** | About Us static page | GitHub Public URL | `https://github.com/Ajaya-Nandiyawar/cars-dealership-capstone/blob/main/server/frontend/static/About.html` | **VERIFIED (Live Public)** | None. Published and verified. |
+| **Task 4** | Contact Us static page | GitHub Public URL | `https://github.com/Ajaya-Nandiyawar/cars-dealership-capstone/blob/main/server/frontend/static/Contact.html` | **VERIFIED (Live Public)** | None. Published and verified. |
 | **Task 5** | User Login API | Text output | `submission_evidence/commands/loginuser.txt` | **VERIFIED (HTTP 200)** | None. Real cURL output captured. |
 | **Task 6** | User Logout API | Text output | `submission_evidence/commands/logoutuser.txt` | **VERIFIED (HTTP 200)** | None. Real cURL output captured. |
-| **Task 7** | Registration component | GitHub Public URL | `https://github.com/<owner>/<repo>/blob/main/server/frontend/src/components/Register/Register.jsx` | **Verified Ready** | Push to GitHub repository |
+| **Task 7** | Registration component | GitHub Public URL | `https://github.com/Ajaya-Nandiyawar/cars-dealership-capstone/blob/main/server/frontend/src/components/Register/Register.jsx` | **VERIFIED (Live Public)** | None. Published and verified. |
 | **Task 8** | Dealer reviews retrieval | Text output | `submission_evidence/commands/getdealerreviews.txt` | **VERIFIED (HTTP 200)** | None. Real cURL output captured. |
 | **Task 9** | All dealers retrieval | Text output | `submission_evidence/commands/getalldealers.txt` | **VERIFIED (HTTP 200)** | None. Real cURL output captured. |
 | **Task 10** | Dealer by ID retrieval | Text output | `submission_evidence/commands/getdealerbyid.txt` | **VERIFIED (HTTP 200)** | None. Real cURL output captured. |

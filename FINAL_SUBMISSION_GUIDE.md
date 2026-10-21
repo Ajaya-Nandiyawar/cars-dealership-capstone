@@ -43,22 +43,22 @@ Once pushed to GitHub, replace `<YOUR_USERNAME>` and `<YOUR_REPO>` with your act
 
 ### Question 1 (Task 1): README URL
 ```text
-https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/README.md
+https://github.com/Ajaya-Nandiyawar/cars-dealership-capstone/blob/main/README.md
 ```
 
 ### Question 2 (Task 3): About Us Page URL
 ```text
-https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/server/frontend/static/About.html
+https://github.com/Ajaya-Nandiyawar/cars-dealership-capstone/blob/main/server/frontend/static/About.html
 ```
 
 ### Question 3 (Task 4): Contact Us Page URL
 ```text
-https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/server/frontend/static/Contact.html
+https://github.com/Ajaya-Nandiyawar/cars-dealership-capstone/blob/main/server/frontend/static/Contact.html
 ```
 
 ### Question 4 (Task 7): Registration Component URL
 ```text
-https://github.com/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/server/frontend/src/components/Register/Register.jsx
+https://github.com/Ajaya-Nandiyawar/cars-dealership-capstone/blob/main/server/frontend/src/components/Register/Register.jsx
 ```
 
 ---
