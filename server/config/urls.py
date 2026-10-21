@@ -10,6 +10,7 @@ from server.config.static_views import (
 )
 from server.dealerships.views import DealerListView, DealerDetailView, CarMakeListView
 from server.reviews.views import DealerReviewsView
+from server.sentiment.views import FetchSentimentView
 
 urlpatterns = [
     # Admin Interface
@@ -26,6 +27,20 @@ urlpatterns = [
     path("api/", include("server.reviews.urls")),
     path("api/", include("server.sentiment.urls")),
 
+    # Coursera / Express Capstone Microservice Routing Standards
+    path("fetchDealers", DealerListView.as_view(), name="fetch-dealers"),
+    path("fetchDealers/", DealerListView.as_view(), name="fetch-dealers-slash"),
+    path("fetchDealers/<str:state>", DealerListView.as_view(), name="fetch-dealers-state"),
+    path("fetchDealers/<str:state>/", DealerListView.as_view(), name="fetch-dealers-state-slash"),
+    path("fetchDealer/<int:dealer_id>", DealerDetailView.as_view(), name="fetch-dealer"),
+    path("fetchDealer/<int:dealer_id>/", DealerDetailView.as_view(), name="fetch-dealer-slash"),
+    path("fetchReviews/dealer/<int:dealer_id>", DealerReviewsView.as_view(), name="fetch-dealer-reviews"),
+    path("fetchReviews/dealer/<int:dealer_id>/", DealerReviewsView.as_view(), name="fetch-dealer-reviews-slash"),
+    path("fetchSentiment/<path:text>", FetchSentimentView.as_view(), name="fetch-sentiment"),
+    path("fetchSentiment/<path:text>/", FetchSentimentView.as_view(), name="fetch-sentiment-slash"),
+    path("fetchCars", CarMakeListView.as_view(), name="fetch-cars"),
+    path("fetchCars/", CarMakeListView.as_view(), name="fetch-cars-slash"),
+
     # Static HTML Deliverables
     path("about/", serve_about, name="about-page"),
     path("about.html", serve_about, name="about-html-page"),
@@ -41,11 +56,18 @@ urlpatterns = [
     path("djangoapp/logout", LogoutView.as_view(), name="alias-logout"),
     path("djangoapp/register", RegisterView.as_view(), name="alias-register"),
     path("djangoapp/get_dealers", DealerListView.as_view(), name="alias-dealers"),
+    path("djangoapp/get_dealers/", DealerListView.as_view(), name="alias-dealers-slash"),
     path("djangoapp/get_dealers/<str:state>", DealerListView.as_view(), name="alias-dealers-state"),
+    path("djangoapp/get_dealers/<str:state>/", DealerListView.as_view(), name="alias-dealers-state-slash"),
     path("djangoapp/dealer/<int:dealer_id>", DealerDetailView.as_view(), name="alias-dealer-detail"),
+    path("djangoapp/dealer/<int:dealer_id>/", DealerDetailView.as_view(), name="alias-dealer-detail-slash"),
     path("djangoapp/get_cars", CarMakeListView.as_view(), name="alias-cars"),
+    path("djangoapp/get_cars/", CarMakeListView.as_view(), name="alias-cars-slash"),
     path("djangoapp/reviews/dealer/<int:dealer_id>", DealerReviewsView.as_view(), name="alias-dealer-reviews"),
+    path("djangoapp/reviews/dealer/<int:dealer_id>/", DealerReviewsView.as_view(), name="alias-dealer-reviews-slash"),
     path("djangoapp/add_review", DealerReviewsView.as_view(), name="alias-add-review"),
+    path("djangoapp/add_review/", DealerReviewsView.as_view(), name="alias-add-review-slash"),
+    path("djangoapp/analyze/<path:text>", FetchSentimentView.as_view(), name="djangoapp-analyze"),
 
     # Frontend Single Page Application Root & Routes
     path("", serve_frontend_app, name="frontend-root"),

@@ -150,15 +150,10 @@ class LogoutView(APIView):
     permission_classes = []
 
     def post(self, request):
-        # Access underlying request for session termination
         req = getattr(request, "_request", request)
-        username = req.user.username if hasattr(req, "user") and req.user.is_authenticated else ""
         logout(req)
         return Response(
-            {
-                "status": "success",
-                "message": f"User {username} logged out successfully." if username else "Logged out successfully.",
-            },
+            {"userName": "", "status": "success"},
             status=status.HTTP_200_OK,
         )
 
@@ -166,7 +161,7 @@ class LogoutView(APIView):
         req = getattr(request, "_request", request)
         logout(req)
         return Response(
-            {"status": "success", "message": "Logged out successfully."},
+            {"userName": "", "status": "success"},
             status=status.HTTP_200_OK,
         )
 

@@ -1,4 +1,15 @@
+# Repository name
+cars-dealership-capstone
+
+# Project name
+Car Dealership Capstone Application
+
 # Cars Dealership Full-Stack Capstone Web Application
+
+- **Repository name:** cars-dealership-capstone
+- **Project name:** Car Dealership Capstone Application
+- **Author:** Ajaya Nandiyawar
+- **Course:** Full Stack Cloud Development Capstone Project
 
 ![CI/CD Pipeline](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-blue?logo=githubactions)
 ![Django](https://img.shields.io/badge/Django-5.1%20LTS-092E20?logo=django)

@@ -29,6 +29,7 @@ class DealerReviewsView(APIView):
                 status=status.HTTP_401_UNAUTHORIZED,
             )
 
+        user = request.user
         # Validate dealer
         dealer = get_object_or_404(Dealer, pk=dealer_id)
 
@@ -62,7 +63,7 @@ class DealerReviewsView(APIView):
 
         review = Review.objects.create(
             dealer=dealer,
-            user=request.user,
+            user=user,
             name=reviewer_name,
             review=review_text.strip(),
             purchase=purchase,

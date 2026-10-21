@@ -228,14 +228,22 @@ const DealerList = ({
               </div>
 
               <div className="dealer-body">
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.4rem" }}>
+                  <span className="dealer-id-pill" style={{ background: "#0284c7", color: "#ffffff", padding: "0.2rem 0.6rem", borderRadius: "4px", fontSize: "0.85rem", fontWeight: "bold" }}>
+                    ID: #{dealer.id}
+                  </span>
+                  <span style={{ color: "#38bdf8", fontSize: "0.85rem", fontWeight: 600 }}>State: {dealer.state}</span>
+                </div>
                 <h3 className="dealer-name">{dealer.full_name}</h3>
-                <div className="dealer-location">
+                <div className="dealer-location" style={{ marginBottom: "0.25rem" }}>
                   <span>📍</span>
                   <span>
-                    {dealer.city}, {dealer.state} {dealer.zip}
+                    <strong>City:</strong> {dealer.city} | <strong>State:</strong> {dealer.state} | <strong>Zip:</strong> {dealer.zip}
                   </span>
                 </div>
-                <p className="dealer-address">{dealer.address}</p>
+                <p className="dealer-address" style={{ margin: "0.25rem 0 0.75rem", color: "#cbd5e1", fontSize: "0.88rem" }}>
+                  <strong>Address:</strong> {dealer.address}, {dealer.city}, {dealer.state} {dealer.zip}
+                </p>
 
                 <div className="dealer-meta">
                   <span className="reviews-badge">

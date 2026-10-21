@@ -9,16 +9,16 @@ from .serializers import DealerSerializer, CarMakeSerializer
 class DealerListView(APIView):
     """
     Retrieve all dealerships or filter dealerships by state.
-    Supports query parameter: ?state=Kansas (case-insensitive)
+    Supports path param or query parameter: ?state=Kansas (case-insensitive)
     """
 
-    def get(self, request):
-        state = request.query_params.get("state")
+    def get(self, request, state=None):
+        state_param = state or request.query_params.get("state")
         queryset = Dealer.objects.all()
 
-        if state:
+        if state_param:
             # Case-insensitive state filtering (matches 'Kansas', 'kansas', 'KANSAS', etc.)
-            queryset = queryset.filter(state__iexact=state.strip())
+            queryset = queryset.filter(state__iexact=state_param.strip())
 
         serializer = DealerSerializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -49,9 +49,28 @@ class DealerByStateView(APIView):
 class CarMakeListView(APIView):
     """
     Retrieve all car makes along with their associated models.
+    Supports both direct array and Coursera {"CarMakes": ..., "CarModels": ...} format.
     """
 
     def get(self, request):
         makes = CarMake.objects.prefetch_related("models").all()
         serializer = CarMakeSerializer(makes, many=True)
+
+        # If requested via Coursera get_cars endpoint, return dictionary with CarMakes and CarModels
+        if "djangoapp" in request.path or "get_cars" in request.path or "fetchCars" in request.path:
+            from .models import CarModel
+            car_models = CarModel.objects.select_related("car_make").all()
+            cars = [
+                {"CarModel": m.name, "CarMake": m.car_make.name}
+                for m in car_models
+            ]
+            return Response(
+                {
+                    "CarMakes": serializer.data,
+                    "CarModels": cars,
+                    "status": 200,
+                },
+                status=status.HTTP_200_OK,
+            )
+
         return Response(serializer.data, status=status.HTTP_200_OK)

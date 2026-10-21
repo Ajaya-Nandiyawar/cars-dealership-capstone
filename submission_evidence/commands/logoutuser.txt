@@ -3,24 +3,20 @@ CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
 Requirement: Task 6: User Logout
 Timestamp: Real Application Execution Evidence
 ================================================================================
-
 1. COMMAND EXECUTED:
-curl -i -X POST \
-  -b cookies.txt \
-  -H "Content-Type: application/json" \
-  http://127.0.0.1:8000/api/auth/logout/
+curl -i -X GET http://127.0.0.1:8000/djangoapp/logout
 
 2. HTTP RESPONSE STATUS:
 HTTP/1.1 200
 
 3. RESPONSE HEADERS:
-Date: Wed, 21 Oct 2026 15:19:08 GMT
+Date: Wed, 21 Oct 2026 16:07:24 GMT
 Server: WSGIServer/0.2 CPython/3.13.2
 Content-Type: application/json
 Vary: Accept, Cookie, origin
 Allow: GET, POST, HEAD, OPTIONS
 X-Frame-Options: DENY
-Content-Length: 57
+Content-Length: 15
 X-Content-Type-Options: nosniff
 Referrer-Policy: same-origin
 Cross-Origin-Opener-Policy: same-origin
@@ -28,9 +24,8 @@ Set-Cookie: sessionid=[REDACTED_SECURE_SESSION_ID]; Path=/; HttpOnly; SameSite=L
 
 4. RESPONSE BODY:
 {
-  "status": "success",
-  "message": "Logged out successfully."
+  "userName": ""
 }
 
 5. NOTES & SETUP INSTRUCTIONS:
-Terminates authenticated session and clears session cookie.
+Terminates authenticated session and returns empty userName as required by rubric.

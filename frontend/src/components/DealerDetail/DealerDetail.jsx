@@ -282,12 +282,23 @@ const DealerDetail = ({
                         </div>
                       </div>
 
-                      {/* Sentiment Badge */}
-                      <span className={`sentiment-badge sentiment-${rev.sentiment || "neutral"}`}>
-                        {rev.sentiment === "positive" ? "✓ " : rev.sentiment === "negative" ? "✗ " : "• "}
-                        {rev.sentiment || "neutral"}
+                      {/* Sentiment Image / Badge */}
+                      <span
+                        className={`sentiment-badge sentiment-${rev.sentiment || "neutral"}`}
+                        id={`review-sentiment-${rev.id}`}
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "0.4rem",
+                          padding: "0.35rem 0.8rem",
+                          borderRadius: "999px",
+                          fontWeight: 700,
+                          fontSize: "0.9rem",
+                        }}
+                      >
+                        {rev.sentiment === "positive" ? "😊 Positive (Happy)" : rev.sentiment === "negative" ? "😞 Negative (Sad)" : "😐 Neutral"}
                         {typeof rev.sentiment_score === "number" && (
-                          <span style={{ opacity: 0.8, marginLeft: "0.25rem" }}>
+                          <span style={{ opacity: 0.85, marginLeft: "0.2rem", fontSize: "0.8rem" }}>
                             ({rev.sentiment_score.toFixed(2)})
                           </span>
                         )}

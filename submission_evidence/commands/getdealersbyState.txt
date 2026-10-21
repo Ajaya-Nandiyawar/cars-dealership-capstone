@@ -3,15 +3,14 @@ CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
 Requirement: Task 11: Kansas Dealers Filter
 Timestamp: Real Application Execution Evidence
 ================================================================================
-
 1. COMMAND EXECUTED:
-curl -i "http://127.0.0.1:8000/api/dealers/?state=Kansas"
+curl -i http://127.0.0.1:8000/fetchDealers/Kansas
 
 2. HTTP RESPONSE STATUS:
 HTTP/1.1 200
 
 3. RESPONSE HEADERS:
-Date: Wed, 21 Oct 2026 15:19:08 GMT
+Date: Wed, 21 Oct 2026 16:07:24 GMT
 Server: WSGIServer/0.2 CPython/3.13.2
 Content-Type: application/json
 Vary: Accept, Cookie, origin
@@ -203,4 +202,4 @@ Cross-Origin-Opener-Policy: same-origin
 ]
 
 5. NOTES & SETUP INSTRUCTIONS:
-Filters dealerships located in Kansas (Overland Park, Wichita, Topeka, Kansas City, Lawrence).
+Filters dealerships located in Kansas via standard /fetchDealers/<state> endpoint.

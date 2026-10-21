@@ -133,10 +133,17 @@ const Register = ({ onNavigateToLogin, apiBaseUrl = "" }) => {
             <input
               type="text"
               id="reg-username"
-              name="username"
-              placeholder="e.g. johndoe"
-              value={formData.username}
-              onChange={handleChange}
+              name="userName"
+              placeholder="Username"
+              value={formData.username || formData.userName || ""}
+              onChange={(e) => {
+                const val = e.target.value;
+                setFormData((prev) => ({ ...prev, username: val, userName: val }));
+                if (errors.username || errors.userName) {
+                  setErrors((prev) => ({ ...prev, username: "", userName: "" }));
+                }
+                setServerError("");
+              }}
               className={errors.username ? "input-error" : ""}
               autoComplete="username"
               required
@@ -151,7 +158,7 @@ const Register = ({ onNavigateToLogin, apiBaseUrl = "" }) => {
               type="text"
               id="reg-firstName"
               name="firstName"
-              placeholder="e.g. John"
+              placeholder="First Name"
               value={formData.firstName}
               onChange={handleChange}
               className={errors.firstName ? "input-error" : ""}
@@ -168,7 +175,7 @@ const Register = ({ onNavigateToLogin, apiBaseUrl = "" }) => {
               type="text"
               id="reg-lastName"
               name="lastName"
-              placeholder="e.g. Doe"
+              placeholder="Last Name"
               value={formData.lastName}
               onChange={handleChange}
               className={errors.lastName ? "input-error" : ""}
@@ -185,7 +192,7 @@ const Register = ({ onNavigateToLogin, apiBaseUrl = "" }) => {
               type="email"
               id="reg-email"
               name="email"
-              placeholder="e.g. john@example.com"
+              placeholder="Email"
               value={formData.email}
               onChange={handleChange}
               className={errors.email ? "input-error" : ""}
@@ -202,7 +209,7 @@ const Register = ({ onNavigateToLogin, apiBaseUrl = "" }) => {
               type="password"
               id="reg-password"
               name="password"
-              placeholder="Minimum 6 characters"
+              placeholder="Password"
               value={formData.password}
               onChange={handleChange}
               className={errors.password ? "input-error" : ""}
@@ -218,7 +225,7 @@ const Register = ({ onNavigateToLogin, apiBaseUrl = "" }) => {
             id="register-submit-btn"
             disabled={loading}
           >
-            {loading ? "Creating Account..." : "Register Account"}
+            Register
           </button>
         </form>
 

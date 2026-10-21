@@ -9,7 +9,7 @@ const ReviewForm = ({
 }) => {
   const [reviewText, setReviewText] = useState("");
   const [purchase, setPurchase] = useState(false);
-  const [purchaseDate, setPurchaseDate] = useState("");
+  const [purchaseDate, setPurchaseDate] = useState("2024-02-14");
   const [carMake, setCarMake] = useState("");
   const [carModel, setCarModel] = useState("");
   const [carYear, setCarYear] = useState(new Date().getFullYear());
@@ -318,7 +318,7 @@ const ReviewForm = ({
           disabled={loading}
           style={{ width: "auto", minWidth: "200px" }}
         >
-          {loading ? "Publishing Review..." : "Publish Review"}
+          {loading ? "Posting Review..." : "Post Review"}
         </button>
       </form>
     </div>

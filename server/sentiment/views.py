@@ -64,3 +64,22 @@ class SentimentAnalysisView(APIView):
             },
             status=status.HTTP_200_OK,
         )
+
+
+class FetchSentimentView(APIView):
+    """
+    GET /fetchSentiment/<path:text>
+    GET /djangoapp/analyze/<path:text>
+    Returns standard sentiment result: {"sentiment": "positive", "status": 200}
+    """
+
+    def get(self, request, text=""):
+        sentiment_text = text or request.query_params.get("text", "Fantastic services")
+        result = analyze_text_sentiment(sentiment_text)
+        return Response(
+            {
+                "sentiment": result["sentiment"],
+                "status": 200,
+            },
+            status=status.HTTP_200_OK,
+        )

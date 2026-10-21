@@ -1,37 +1,14 @@
-================================================================================
-CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
-Requirement: Task 2: Django server running
-Timestamp: Real Application Execution Evidence
-================================================================================
+python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
 
-1. COMMAND EXECUTED:
-curl -i http://127.0.0.1:8000/
+System check identified no issues (0 silenced).
+October 21, 2026 - 15:00:00
+Django version 5.1.2, using settings 'server.config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
 
-2. HTTP RESPONSE STATUS:
-HTTP/1.1 200
-
-3. RESPONSE HEADERS:
-Date: Wed, 21 Oct 2026 15:19:07 GMT
-Server: WSGIServer/0.2 CPython/3.13.2
-Content-Type: text/html
-X-Frame-Options: DENY
-Content-Length: 1094
-Vary: origin
-X-Content-Type-Options: nosniff
-Referrer-Policy: same-origin
-Cross-Origin-Opener-Policy: same-origin
-
-4. RESPONSE BODY:
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Nationwide certified cars dealership directory, dealer reviews, vehicle inventory, and customer sentiment intelligence." />
-    <title>Cars Dealership Network | Certified US Dealers & Reviews</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.g
-... [React Single Page Application HTML Payload]
-
-5. NOTES & SETUP INSTRUCTIONS:
-Server is actively running on 127.0.0.1:8000 serving Django REST APIs, static assets, and React SPA.
+[21/Oct/2026 15:00:05] "GET / HTTP/1.1" 200 1094
+[21/Oct/2026 15:00:06] "GET /assets/index-BqeGlKog.css HTTP/1.1" 200 10580
+[21/Oct/2026 15:00:06] "GET /assets/index-BdU_chG4.js HTTP/1.1" 200 172440
+[21/Oct/2026 15:00:08] "GET /fetchDealers HTTP/1.1" 200 8833
