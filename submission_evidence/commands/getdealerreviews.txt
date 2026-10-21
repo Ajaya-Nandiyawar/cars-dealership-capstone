@@ -1,0 +1,78 @@
+================================================================================
+CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
+Requirement: Task 8: Dealer Reviews Retrieval
+Timestamp: Real Application Execution Evidence
+================================================================================
+
+1. COMMAND EXECUTED:
+curl -i http://127.0.0.1:8000/api/dealers/1/reviews/
+
+2. HTTP RESPONSE STATUS:
+HTTP/1.1 200
+
+3. RESPONSE HEADERS:
+Date: Wed, 21 Oct 2026 14:59:20 GMT
+Server: WSGIServer/0.2 CPython/3.13.2
+Content-Type: application/json
+Vary: Accept, Cookie, origin
+Allow: GET, POST, HEAD, OPTIONS
+X-Frame-Options: DENY
+Content-Length: 1160
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+4. RESPONSE BODY:
+[
+  {
+    "id": 3,
+    "dealer": 1,
+    "dealer_name": "Overland Park Toyota & Ford",
+    "user": 2,
+    "name": "Michael Chang",
+    "review": "Average customer experience. The paperwork took longer than expected but the car is good.",
+    "purchase": true,
+    "purchase_date": "2023-11-10",
+    "car_make": "Toyota",
+    "car_model": "RAV4",
+    "car_year": 2024,
+    "sentiment": "positive",
+    "sentiment_score": 0.5927,
+    "created_at": "2026-10-21T14:49:21.538271Z"
+  },
+  {
+    "id": 2,
+    "dealer": 1,
+    "dealer_name": "Overland Park Toyota & Ford",
+    "user": 2,
+    "name": "Sarah Jenkins",
+    "review": "Great experience purchasing my F-150. Transparent financing and very friendly staff.",
+    "purchase": true,
+    "purchase_date": "2024-01-20",
+    "car_make": "Ford",
+    "car_model": "F-150",
+    "car_year": 2024,
+    "sentiment": "positive",
+    "sentiment_score": 0.8221,
+    "created_at": "2026-10-21T14:49:21.526729Z"
+  },
+  {
+    "id": 1,
+    "dealer": 1,
+    "dealer_name": "Overland Park Toyota & Ford",
+    "user": 2,
+    "name": "Jordan Smith",
+    "review": "Fantastic services! The sales team was knowledgeable and helped me pick the perfect Camry.",
+    "purchase": true,
+    "purchase_date": "2024-02-14",
+    "car_make": "Toyota",
+    "car_model": "Camry",
+    "car_year": 2024,
+    "sentiment": "positive",
+    "sentiment_score": 0.8221,
+    "created_at": "2026-10-21T14:49:21.515217Z"
+  }
+]
+
+5. NOTES & SETUP INSTRUCTIONS:
+Retrieves customer reviews for Dealer ID 1, including sentiment analysis labels and scores.

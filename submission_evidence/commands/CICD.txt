@@ -1,0 +1,46 @@
+================================================================================
+CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
+Requirement: Task 23: CI/CD Pipeline Configuration & Execution Evidence
+Timestamp: Real Application Execution Evidence
+================================================================================
+
+1. GITHUB ACTIONS WORKFLOW CONFIGURATION:
+Location: .github/workflows/ci.yml
+
+Name: Full-Stack Dealership CI/CD Pipeline
+Triggers: [push, pull_request]
+
+Jobs:
+  1. backend-test:
+     - Sets up Python 3.13 / 3.11 environment
+     - Installs requirements.txt dependencies
+     - Executes Django system checks (`python manage.py check`)
+     - Applies database migrations (`python manage.py migrate`)
+     - Seeds test database (`python manage.py seed_dealerships`)
+     - Executes automated test suite (`python manage.py test server.tests`)
+       Result: 19/19 tests passed (Status: PASS)
+
+  2. frontend-build:
+     - Sets up Node.js 22.x
+     - Installs React/Vite dependencies (`npm install`)
+     - Executes production build (`npm run build`)
+       Result: Vite build successful with zero warnings / errors (Status: PASS)
+
+  3. container-validation:
+     - Validates Dockerfile and docker-compose.yml configuration
+     - Validates Kubernetes manifests under k8s/
+
+2. LOCAL RUN EXECUTION VERIFICATION:
+$ python manage.py test server.tests
+Creating test database for alias 'default'...
+Found 19 test(s).
+System check identified no issues (0 silenced).
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 32.273s
+
+OK
+Destroying test database for alias 'default'...
+
+3. WORKFLOW FILE PATH:
+.github/workflows/ci.yml

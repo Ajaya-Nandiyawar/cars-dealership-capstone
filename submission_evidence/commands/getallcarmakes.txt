@@ -1,0 +1,328 @@
+================================================================================
+CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
+Requirement: Tasks 14-15: Car Makes and Models Retrieval
+Timestamp: Real Application Execution Evidence
+================================================================================
+
+1. COMMAND EXECUTED:
+curl -i http://127.0.0.1:8000/api/car-makes/
+
+2. HTTP RESPONSE STATUS:
+HTTP/1.1 200
+
+3. RESPONSE HEADERS:
+Date: Wed, 21 Oct 2026 14:59:20 GMT
+Server: WSGIServer/0.2 CPython/3.13.2
+Content-Type: application/json
+Vary: Accept, Cookie, origin
+Allow: GET, HEAD, OPTIONS
+X-Frame-Options: DENY
+Content-Length: 3882
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+4. RESPONSE BODY:
+[
+  {
+    "id": 7,
+    "name": "Audi",
+    "description": "Progressive luxury vehicles known for Quattro all-wheel drive and sleek digital cockpits.",
+    "country": "Germany",
+    "models": [
+      {
+        "id": 22,
+        "name": "A4",
+        "car_make": 7,
+        "car_make_name": "Audi",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 9
+      },
+      {
+        "id": 23,
+        "name": "Q5",
+        "car_make": 7,
+        "car_make_name": "Audi",
+        "car_type": "SUV",
+        "year": 2023,
+        "dealer": 10
+      },
+      {
+        "id": 24,
+        "name": "e-tron GT",
+        "car_make": 7,
+        "car_make_name": "Audi",
+        "car_type": "ELECTRIC",
+        "year": 2024,
+        "dealer": 10
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "BMW",
+    "description": "The ultimate driving machine delivering luxury, style, and sport performance.",
+    "country": "Germany",
+    "models": [
+      {
+        "id": 19,
+        "name": "3 Series",
+        "car_make": 6,
+        "car_make_name": "BMW",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 8
+      },
+      {
+        "id": 21,
+        "name": "M4",
+        "car_make": 6,
+        "car_make_name": "BMW",
+        "car_type": "COUPE",
+        "year": 2024,
+        "dealer": 9
+      },
+      {
+        "id": 20,
+        "name": "X5",
+        "car_make": 6,
+        "car_make_name": "BMW",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 9
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Chevrolet",
+    "description": "Dependable American trucks, versatile crossovers, and electric models.",
+    "country": "USA",
+    "models": [
+      {
+        "id": 14,
+        "name": "Equinox",
+        "car_make": 4,
+        "car_make_name": "Chevrolet",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 6
+      },
+      {
+        "id": 13,
+        "name": "Silverado",
+        "car_make": 4,
+        "car_make_name": "Chevrolet",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 5
+      },
+      {
+        "id": 15,
+        "name": "Tahoe",
+        "car_make": 4,
+        "car_make_name": "Chevrolet",
+        "car_type": "SUV",
+        "year": 2023,
+        "dealer": 11
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ford",
+    "description": "Iconic American automaker renowned for trucks, SUVs, and performance cars.",
+    "country": "USA",
+    "models": [
+      {
+        "id": 9,
+        "name": "Escape",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 14
+      },
+      {
+        "id": 8,
+        "name": "Explorer",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "SUV",
+        "year": 2023,
+        "dealer": 6
+      },
+      {
+        "id": 6,
+        "name": "F-150",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 1
+      },
+      {
+        "id": 7,
+        "name": "Mustang",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "COUPE",
+        "year": 2024,
+        "dealer": 5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Honda",
+    "description": "Engineered for durability, modern safety, and exceptional fuel economy.",
+    "country": "Japan",
+    "models": [
+      {
+        "id": 12,
+        "name": "Accord",
+        "car_make": 3,
+        "car_make_name": "Honda",
+        "car_type": "SEDAN",
+        "year": 2023,
+        "dealer": 7
+      },
+      {
+        "id": 11,
+        "name": "CR-V",
+        "car_make": 3,
+        "car_make_name": "Honda",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 2
+      },
+      {
+        "id": 10,
+        "name": "Civic",
+        "car_make": 3,
+        "car_make_name": "Honda",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 2
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Hyundai",
+    "description": "Award-winning design, long warranties, and innovative electric platforms.",
+    "country": "South Korea",
+    "models": [
+      {
+        "id": 25,
+        "name": "Ioniq 5",
+        "car_make": 8,
+        "car_make_name": "Hyundai",
+        "car_type": "ELECTRIC",
+        "year": 2024,
+        "dealer": 12
+      },
+      {
+        "id": 26,
+        "name": "Tucson",
+        "car_make": 8,
+        "car_make_name": "Hyundai",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 13
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Tesla",
+    "description": "Pioneering premium electric vehicles with cutting-edge autonomous technology.",
+    "country": "USA",
+    "models": [
+      {
+        "id": 18,
+        "name": "Cybertruck",
+        "car_make": 5,
+        "car_make_name": "Tesla",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 8
+      },
+      {
+        "id": 16,
+        "name": "Model 3",
+        "car_make": 5,
+        "car_make_name": "Tesla",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 7
+      },
+      {
+        "id": 17,
+        "name": "Model Y",
+        "car_make": 5,
+        "car_make_name": "Tesla",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 8
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Toyota",
+    "description": "Global leader in reliable, high-efficiency vehicles and hybrids.",
+    "country": "Japan",
+    "models": [
+      {
+        "id": 1,
+        "name": "Camry",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 1
+      },
+      {
+        "id": 3,
+        "name": "Corolla",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SEDAN",
+        "year": 2023,
+        "dealer": 2
+      },
+      {
+        "id": 4,
+        "name": "Highlander",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 3
+      },
+      {
+        "id": 2,
+        "name": "RAV4",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 1
+      },
+      {
+        "id": 5,
+        "name": "Tacoma",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 4
+      }
+    ]
+  }
+]
+
+5. NOTES & SETUP INSTRUCTIONS:
+Retrieves all car manufacturers (Toyota, Ford, Honda, Chevrolet, Tesla, BMW, Audi, Hyundai) and nested models.

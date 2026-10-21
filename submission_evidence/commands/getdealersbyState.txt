@@ -1,0 +1,206 @@
+================================================================================
+CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
+Requirement: Task 11: Kansas Dealers Filter
+Timestamp: Real Application Execution Evidence
+================================================================================
+
+1. COMMAND EXECUTED:
+curl -i "http://127.0.0.1:8000/api/dealers/?state=Kansas"
+
+2. HTTP RESPONSE STATUS:
+HTTP/1.1 200
+
+3. RESPONSE HEADERS:
+Date: Wed, 21 Oct 2026 14:59:20 GMT
+Server: WSGIServer/0.2 CPython/3.13.2
+Content-Type: application/json
+Vary: Accept, Cookie, origin
+Allow: GET, HEAD, OPTIONS
+X-Frame-Options: DENY
+Content-Length: 3111
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+4. RESPONSE BODY:
+[
+  {
+    "id": 1,
+    "full_name": "Overland Park Toyota & Ford",
+    "short_name": "Overland Park Motors",
+    "city": "Overland Park",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "11401 Metcalf Ave",
+    "zip": "66210",
+    "lat": 38.9213,
+    "long": -94.6672,
+    "phone": "(913) 555-0101",
+    "email": "contact@opmotors-kansas.com",
+    "website": "https://opmotors-kansas.com",
+    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 6,
+        "name": "F-150",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 1
+      },
+      {
+        "id": 1,
+        "name": "Camry",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 1
+      },
+      {
+        "id": 2,
+        "name": "RAV4",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 1
+      }
+    ],
+    "reviews_count": 3
+  },
+  {
+    "id": 2,
+    "full_name": "Wichita Auto Gallery",
+    "short_name": "Wichita Auto",
+    "city": "Wichita",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "3211 E Kellogg Ave",
+    "zip": "67211",
+    "lat": 37.6833,
+    "long": -97.3001,
+    "phone": "(316) 555-0122",
+    "email": "sales@wichita-autogallery.com",
+    "website": "https://wichita-autogallery.com",
+    "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 11,
+        "name": "CR-V",
+        "car_make": 3,
+        "car_make_name": "Honda",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 2
+      },
+      {
+        "id": 10,
+        "name": "Civic",
+        "car_make": 3,
+        "car_make_name": "Honda",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 2
+      },
+      {
+        "id": 3,
+        "name": "Corolla",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SEDAN",
+        "year": 2023,
+        "dealer": 2
+      }
+    ],
+    "reviews_count": 2
+  },
+  {
+    "id": 3,
+    "full_name": "Topeka Premier Motors",
+    "short_name": "Topeka Premier",
+    "city": "Topeka",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "2901 SW Wanamaker Rd",
+    "zip": "66614",
+    "lat": 39.0234,
+    "long": -95.7482,
+    "phone": "(785) 555-0144",
+    "email": "info@topekapremier.com",
+    "website": "https://topekapremier.com",
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 4,
+        "name": "Highlander",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 3
+      }
+    ],
+    "reviews_count": 1
+  },
+  {
+    "id": 4,
+    "full_name": "Kansas City Metro Auto",
+    "short_name": "KC Metro Auto",
+    "city": "Kansas City",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "7800 State Ave",
+    "zip": "66112",
+    "lat": 39.1172,
+    "long": -94.7554,
+    "phone": "(913) 555-0188",
+    "email": "care@kcmetroauto.com",
+    "website": "https://kcmetroauto.com",
+    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 5,
+        "name": "Tacoma",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 4
+      }
+    ],
+    "reviews_count": 0
+  },
+  {
+    "id": 14,
+    "full_name": "Great Plains Auto Center",
+    "short_name": "Great Plains Auto",
+    "city": "Lawrence",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "2233 W 23rd St",
+    "zip": "66046",
+    "lat": 38.9392,
+    "long": -95.2612,
+    "phone": "(785) 555-0191",
+    "email": "service@greatplainsautocenter.com",
+    "website": "https://greatplainsautocenter.com",
+    "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 9,
+        "name": "Escape",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 14
+      }
+    ],
+    "reviews_count": 0
+  }
+]
+
+5. NOTES & SETUP INSTRUCTIONS:
+Filters dealerships located in Kansas (Overland Park, Wichita, Topeka, Kansas City, Lawrence).

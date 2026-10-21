@@ -1,0 +1,44 @@
+================================================================================
+CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
+Requirement: Task 16: Review Sentiment Analysis ('Fantastic services')
+Timestamp: Real Application Execution Evidence
+================================================================================
+
+1. COMMAND EXECUTED:
+curl -i -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Fantastic services"}' \
+  http://127.0.0.1:8000/api/analyze-review/
+
+2. HTTP RESPONSE STATUS:
+HTTP/1.1 200
+
+3. RESPONSE HEADERS:
+Date: Wed, 21 Oct 2026 14:59:20 GMT
+Server: WSGIServer/0.2 CPython/3.13.2
+Content-Type: application/json
+Vary: Accept, Cookie, origin
+Allow: GET, POST, HEAD, OPTIONS
+X-Frame-Options: DENY
+Content-Length: 169
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+4. RESPONSE BODY:
+{
+  "status": "success",
+  "text": "Fantastic services",
+  "sentiment": "positive",
+  "score": 0.5574,
+  "label": "positive",
+  "details": {
+    "neg": 0.0,
+    "neu": 0.217,
+    "pos": 0.783,
+    "compound": 0.5574
+  }
+}
+
+5. NOTES & SETUP INSTRUCTIONS:
+Accepts exact text 'Fantastic services' and returns positive sentiment with score.

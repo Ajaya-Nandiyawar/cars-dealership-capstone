@@ -1,0 +1,530 @@
+================================================================================
+CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
+Requirement: Task 9: All Dealers Retrieval
+Timestamp: Real Application Execution Evidence
+================================================================================
+
+1. COMMAND EXECUTED:
+curl -i http://127.0.0.1:8000/api/dealers/
+
+2. HTTP RESPONSE STATUS:
+HTTP/1.1 200
+
+3. RESPONSE HEADERS:
+Date: Wed, 21 Oct 2026 14:59:20 GMT
+Server: WSGIServer/0.2 CPython/3.13.2
+Content-Type: application/json
+Vary: Accept, Cookie, origin
+Allow: GET, HEAD, OPTIONS
+X-Frame-Options: DENY
+Content-Length: 8833
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+4. RESPONSE BODY:
+[
+  {
+    "id": 1,
+    "full_name": "Overland Park Toyota & Ford",
+    "short_name": "Overland Park Motors",
+    "city": "Overland Park",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "11401 Metcalf Ave",
+    "zip": "66210",
+    "lat": 38.9213,
+    "long": -94.6672,
+    "phone": "(913) 555-0101",
+    "email": "contact@opmotors-kansas.com",
+    "website": "https://opmotors-kansas.com",
+    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 6,
+        "name": "F-150",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 1
+      },
+      {
+        "id": 1,
+        "name": "Camry",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 1
+      },
+      {
+        "id": 2,
+        "name": "RAV4",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 1
+      }
+    ],
+    "reviews_count": 3
+  },
+  {
+    "id": 2,
+    "full_name": "Wichita Auto Gallery",
+    "short_name": "Wichita Auto",
+    "city": "Wichita",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "3211 E Kellogg Ave",
+    "zip": "67211",
+    "lat": 37.6833,
+    "long": -97.3001,
+    "phone": "(316) 555-0122",
+    "email": "sales@wichita-autogallery.com",
+    "website": "https://wichita-autogallery.com",
+    "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 11,
+        "name": "CR-V",
+        "car_make": 3,
+        "car_make_name": "Honda",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 2
+      },
+      {
+        "id": 10,
+        "name": "Civic",
+        "car_make": 3,
+        "car_make_name": "Honda",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 2
+      },
+      {
+        "id": 3,
+        "name": "Corolla",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SEDAN",
+        "year": 2023,
+        "dealer": 2
+      }
+    ],
+    "reviews_count": 2
+  },
+  {
+    "id": 3,
+    "full_name": "Topeka Premier Motors",
+    "short_name": "Topeka Premier",
+    "city": "Topeka",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "2901 SW Wanamaker Rd",
+    "zip": "66614",
+    "lat": 39.0234,
+    "long": -95.7482,
+    "phone": "(785) 555-0144",
+    "email": "info@topekapremier.com",
+    "website": "https://topekapremier.com",
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 4,
+        "name": "Highlander",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 3
+      }
+    ],
+    "reviews_count": 1
+  },
+  {
+    "id": 4,
+    "full_name": "Kansas City Metro Auto",
+    "short_name": "KC Metro Auto",
+    "city": "Kansas City",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "7800 State Ave",
+    "zip": "66112",
+    "lat": 39.1172,
+    "long": -94.7554,
+    "phone": "(913) 555-0188",
+    "email": "care@kcmetroauto.com",
+    "website": "https://kcmetroauto.com",
+    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 5,
+        "name": "Tacoma",
+        "car_make": 1,
+        "car_make_name": "Toyota",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 4
+      }
+    ],
+    "reviews_count": 0
+  },
+  {
+    "id": 5,
+    "full_name": "Lone Star Dealership Network",
+    "short_name": "Lone Star Auto",
+    "city": "Dallas",
+    "state": "Texas",
+    "st": "TX",
+    "address": "4500 LBJ Freeway",
+    "zip": "75244",
+    "lat": 32.9234,
+    "long": -96.8341,
+    "phone": "(214) 555-0199",
+    "email": "contact@lonestarauto-tx.com",
+    "website": "https://lonestarauto-tx.com",
+    "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 13,
+        "name": "Silverado",
+        "car_make": 4,
+        "car_make_name": "Chevrolet",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 5
+      },
+      {
+        "id": 7,
+        "name": "Mustang",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "COUPE",
+        "year": 2024,
+        "dealer": 5
+      }
+    ],
+    "reviews_count": 1
+  },
+  {
+    "id": 6,
+    "full_name": "Austin Precision Automotive",
+    "short_name": "Austin Precision",
+    "city": "Austin",
+    "state": "Texas",
+    "st": "TX",
+    "address": "8101 N MoPac Expy",
+    "zip": "78759",
+    "lat": 30.3644,
+    "long": -97.7428,
+    "phone": "(512) 555-0133",
+    "email": "sales@austinprecision.com",
+    "website": "https://austinprecision.com",
+    "image": "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 14,
+        "name": "Equinox",
+        "car_make": 4,
+        "car_make_name": "Chevrolet",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 6
+      },
+      {
+        "id": 8,
+        "name": "Explorer",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "SUV",
+        "year": 2023,
+        "dealer": 6
+      }
+    ],
+    "reviews_count": 0
+  },
+  {
+    "id": 7,
+    "full_name": "Golden Gate Auto Mall",
+    "short_name": "Golden Gate Auto",
+    "city": "San Francisco",
+    "state": "California",
+    "st": "CA",
+    "address": "1550 Van Ness Ave",
+    "zip": "94109",
+    "lat": 37.7915,
+    "long": -122.4223,
+    "phone": "(415) 555-0155",
+    "email": "info@goldengatecars.com",
+    "website": "https://goldengatecars.com",
+    "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 12,
+        "name": "Accord",
+        "car_make": 3,
+        "car_make_name": "Honda",
+        "car_type": "SEDAN",
+        "year": 2023,
+        "dealer": 7
+      },
+      {
+        "id": 16,
+        "name": "Model 3",
+        "car_make": 5,
+        "car_make_name": "Tesla",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 7
+      }
+    ],
+    "reviews_count": 1
+  },
+  {
+    "id": 8,
+    "full_name": "SoCal Luxury Cars",
+    "short_name": "SoCal Luxury",
+    "city": "Los Angeles",
+    "state": "California",
+    "st": "CA",
+    "address": "9000 Wilshire Blvd",
+    "zip": "90211",
+    "lat": 34.0667,
+    "long": -118.3888,
+    "phone": "(310) 555-0177",
+    "email": "concierge@socalluxury.com",
+    "website": "https://socalluxury.com",
+    "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 19,
+        "name": "3 Series",
+        "car_make": 6,
+        "car_make_name": "BMW",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 8
+      },
+      {
+        "id": 18,
+        "name": "Cybertruck",
+        "car_make": 5,
+        "car_make_name": "Tesla",
+        "car_type": "TRUCK",
+        "year": 2024,
+        "dealer": 8
+      },
+      {
+        "id": 17,
+        "name": "Model Y",
+        "car_make": 5,
+        "car_make_name": "Tesla",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 8
+      }
+    ],
+    "reviews_count": 0
+  },
+  {
+    "id": 9,
+    "full_name": "Manhattan City Dealership",
+    "short_name": "Manhattan City",
+    "city": "New York",
+    "state": "New York",
+    "st": "NY",
+    "address": "787 11th Ave",
+    "zip": "10019",
+    "lat": 40.7689,
+    "long": -73.9933,
+    "phone": "(212) 555-0166",
+    "email": "sales@manhattancitydealers.com",
+    "website": "https://manhattancitydealers.com",
+    "image": "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 22,
+        "name": "A4",
+        "car_make": 7,
+        "car_make_name": "Audi",
+        "car_type": "SEDAN",
+        "year": 2024,
+        "dealer": 9
+      },
+      {
+        "id": 21,
+        "name": "M4",
+        "car_make": 6,
+        "car_make_name": "BMW",
+        "car_type": "COUPE",
+        "year": 2024,
+        "dealer": 9
+      },
+      {
+        "id": 20,
+        "name": "X5",
+        "car_make": 6,
+        "car_make_name": "BMW",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 9
+      }
+    ],
+    "reviews_count": 0
+  },
+  {
+    "id": 10,
+    "full_name": "Sunshine State Automotive",
+    "short_name": "Sunshine State Auto",
+    "city": "Miami",
+    "state": "Florida",
+    "st": "FL",
+    "address": "3401 Biscayne Blvd",
+    "zip": "33137",
+    "lat": 25.8089,
+    "long": -80.1895,
+    "phone": "(305) 555-0111",
+    "email": "drive@sunshinestateauto.com",
+    "website": "https://sunshinestateauto.com",
+    "image": "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 23,
+        "name": "Q5",
+        "car_make": 7,
+        "car_make_name": "Audi",
+        "car_type": "SUV",
+        "year": 2023,
+        "dealer": 10
+      },
+      {
+        "id": 24,
+        "name": "e-tron GT",
+        "car_make": 7,
+        "car_make_name": "Audi",
+        "car_type": "ELECTRIC",
+        "year": 2024,
+        "dealer": 10
+      }
+    ],
+    "reviews_count": 0
+  },
+  {
+    "id": 11,
+    "full_name": "Windy City Car Hub",
+    "short_name": "Windy City Hub",
+    "city": "Chicago",
+    "state": "Illinois",
+    "st": "IL",
+    "address": "2500 N Western Ave",
+    "zip": "60647",
+    "lat": 41.9272,
+    "long": -87.6873,
+    "phone": "(312) 555-0149",
+    "email": "help@windycitycarhub.com",
+    "website": "https://windycitycarhub.com",
+    "image": "https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 15,
+        "name": "Tahoe",
+        "car_make": 4,
+        "car_make_name": "Chevrolet",
+        "car_type": "SUV",
+        "year": 2023,
+        "dealer": 11
+      }
+    ],
+    "reviews_count": 0
+  },
+  {
+    "id": 12,
+    "full_name": "Emerald City Motors",
+    "short_name": "Emerald City",
+    "city": "Seattle",
+    "state": "Washington",
+    "st": "WA",
+    "address": "1133 4th Ave S",
+    "zip": "98134",
+    "lat": 47.5925,
+    "long": -122.3291,
+    "phone": "(206) 555-0125",
+    "email": "sales@emeraldcitymotors.com",
+    "website": "https://emeraldcitymotors.com",
+    "image": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 25,
+        "name": "Ioniq 5",
+        "car_make": 8,
+        "car_make_name": "Hyundai",
+        "car_type": "ELECTRIC",
+        "year": 2024,
+        "dealer": 12
+      }
+    ],
+    "reviews_count": 0
+  },
+  {
+    "id": 13,
+    "full_name": "Mile High Automotive Group",
+    "short_name": "Mile High Auto",
+    "city": "Denver",
+    "state": "Colorado",
+    "st": "CO",
+    "address": "1200 S Colorado Blvd",
+    "zip": "80246",
+    "lat": 39.6943,
+    "long": -104.9405,
+    "phone": "(303) 555-0182",
+    "email": "contact@milehighautogroup.com",
+    "website": "https://milehighautogroup.com",
+    "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 26,
+        "name": "Tucson",
+        "car_make": 8,
+        "car_make_name": "Hyundai",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 13
+      }
+    ],
+    "reviews_count": 0
+  },
+  {
+    "id": 14,
+    "full_name": "Great Plains Auto Center",
+    "short_name": "Great Plains Auto",
+    "city": "Lawrence",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "2233 W 23rd St",
+    "zip": "66046",
+    "lat": 38.9392,
+    "long": -95.2612,
+    "phone": "(785) 555-0191",
+    "email": "service@greatplainsautocenter.com",
+    "website": "https://greatplainsautocenter.com",
+    "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80",
+    "car_models": [
+      {
+        "id": 9,
+        "name": "Escape",
+        "car_make": 2,
+        "car_make_name": "Ford",
+        "car_type": "SUV",
+        "year": 2024,
+        "dealer": 14
+      }
+    ],
+    "reviews_count": 0
+  }
+]
+
+5. NOTES & SETUP INSTRUCTIONS:
+Retrieves all 14 certified dealerships across multiple US states.

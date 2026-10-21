@@ -1,0 +1,74 @@
+================================================================================
+CARS DEALERSHIP CAPSTONE SUBMISSION EVIDENCE
+Requirement: Task 10: Dealer by ID
+Timestamp: Real Application Execution Evidence
+================================================================================
+
+1. COMMAND EXECUTED:
+curl -i http://127.0.0.1:8000/api/dealers/1/
+
+2. HTTP RESPONSE STATUS:
+HTTP/1.1 200
+
+3. RESPONSE HEADERS:
+Date: Wed, 21 Oct 2026 14:59:20 GMT
+Server: WSGIServer/0.2 CPython/3.13.2
+Content-Type: application/json
+Vary: Accept, Cookie, origin
+Allow: GET, HEAD, OPTIONS
+X-Frame-Options: DENY
+Content-Length: 753
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+4. RESPONSE BODY:
+{
+  "id": 1,
+  "full_name": "Overland Park Toyota & Ford",
+  "short_name": "Overland Park Motors",
+  "city": "Overland Park",
+  "state": "Kansas",
+  "st": "KS",
+  "address": "11401 Metcalf Ave",
+  "zip": "66210",
+  "lat": 38.9213,
+  "long": -94.6672,
+  "phone": "(913) 555-0101",
+  "email": "contact@opmotors-kansas.com",
+  "website": "https://opmotors-kansas.com",
+  "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+  "car_models": [
+    {
+      "id": 6,
+      "name": "F-150",
+      "car_make": 2,
+      "car_make_name": "Ford",
+      "car_type": "TRUCK",
+      "year": 2024,
+      "dealer": 1
+    },
+    {
+      "id": 1,
+      "name": "Camry",
+      "car_make": 1,
+      "car_make_name": "Toyota",
+      "car_type": "SEDAN",
+      "year": 2024,
+      "dealer": 1
+    },
+    {
+      "id": 2,
+      "name": "RAV4",
+      "car_make": 1,
+      "car_make_name": "Toyota",
+      "car_type": "SUV",
+      "year": 2024,
+      "dealer": 1
+    }
+  ],
+  "reviews_count": 3
+}
+
+5. NOTES & SETUP INSTRUCTIONS:
+Retrieves details for Dealer ID 1 (Overland Park Toyota & Ford) including associated car models.

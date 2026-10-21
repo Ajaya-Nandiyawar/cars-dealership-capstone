@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Cars Dealership Network</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <a href="/" class="brand">
+        <div class="brand-icon">🚗</div>
+        <span>Cars Dealerships</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html" class="active">Contact Us</a></li>
+        <li><a href="/admin/">Admin Portal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Contact Our Dealership Support</h1>
+    <p>
+      Have a question about a dealership, vehicle inventory, or your customer review?
+      Our nationwide support team is here to assist you 7 days a week.
+    </p>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    <div class="contact-layout">
+      <!-- Contact Information Cards -->
+      <aside class="contact-info-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #38bdf8;">Get in Touch</h2>
+        
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <strong style="display:block; color:#f8fafc;">National Headquarters</strong>
+            <span style="color:#94a3b8; font-size:0.95rem;">
+              11401 Metcalf Ave, Suite 300<br />
+              Overland Park, KS 66210, USA
+            </span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div>
+            <strong style="display:block; color:#f8fafc;">Toll-Free Customer Line</strong>
+            <span style="color:#94a3b8; font-size:0.95rem;">1-800-555-CARS (2277)</span><br />
+            <span style="color:#64748b; font-size:0.85rem;">Mon - Sat: 8:00 AM - 8:00 PM CST</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div>
+            <strong style="display:block; color:#f8fafc;">Support Email</strong>
+            <span style="color:#94a3b8; font-size:0.95rem;">support@dealerships.example.com</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🕒</div>
+          <div>
+            <strong style="display:block; color:#f8fafc;">Dealership Relations</strong>
+            <span style="color:#94a3b8; font-size:0.95rem;">dealers@dealerships.example.com</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1.25rem; background: #0f172a; border-radius: 8px; border: 1px solid #334155;">
+          <h4 style="color: #38bdf8; margin-bottom: 0.5rem; font-size: 0.95rem;">Kansas Branch Support</h4>
+          <p style="color: #94a3b8; font-size: 0.85rem;">
+            Direct assistance for Wichita, Topeka, Overland Park, and Lawrence dealership locations.
+          </p>
+        </div>
+      </aside>
+
+      <!-- Contact Inquiry Form -->
+      <section class="contact-form-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #f8fafc;">Send Us a Message</h2>
+        
+        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g. Alex Taylor" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Email Address *</label>
+            <input type="email" id="contactEmail" name="email" placeholder="e.g. alex@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="dealershipSelect">Associated Dealership Branch</label>
+            <select id="dealershipSelect" name="dealership">
+              <option value="general">General Inquiry (All Branches)</option>
+              <option value="1">Overland Park Toyota & Ford (Overland Park, KS)</option>
+              <option value="2">Wichita Auto Gallery (Wichita, KS)</option>
+              <option value="3">Topeka Premier Motors (Topeka, KS)</option>
+              <option value="4">Kansas City Metro Auto (Kansas City, KS)</option>
+              <option value="5">Lone Star Dealership Network (Dallas, TX)</option>
+              <option value="7">Golden Gate Auto Mall (San Francisco, CA)</option>
+              <option value="9">Manhattan City Dealership (New York, NY)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <input type="text" id="subject" name="subject" placeholder="Question regarding vehicle stock or review" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we assist you with our automotive network?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" id="submitContactBtn">Submit Inquiry</button>
+
+          <div id="contactFeedback" style="display: none; margin-top: 1rem; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.95rem;"></div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Cars Dealership Capstone Network. All rights reserved. Demonstration Project.</p>
+  </footer>
+
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('contactFeedback');
+      const submitBtn = document.getElementById('submitContactBtn');
+      const name = document.getElementById('fullName').value;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Inquiry';
+        feedback.style.display = 'block';
+        feedback.style.background = 'rgba(16, 185, 129, 0.15)';
+        feedback.style.border = '1px solid #10b981';
+        feedback.style.color = '#34d399';
+        feedback.textContent = `Thank you, ${name}! Your inquiry has been submitted. Our support team will respond within 24 hours.`;
+        document.getElementById('contactForm').reset();
+      }, 600);
+    }
+  </script>
+</body>
+</html>

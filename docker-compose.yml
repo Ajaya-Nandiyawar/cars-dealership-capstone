@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cars_dealership_app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=True
+      - SECRET_KEY=django-insecure-production-capstone-secret-key-123456789
+      - ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0,web
+      - CORS_ALLOW_ALL_ORIGINS=True
+      - DJANGO_SUPERUSER_USERNAME=admin
+      - DJANGO_SUPERUSER_EMAIL=admin@dealerships.example.com
+      - DJANGO_SUPERUSER_PASSWORD=AdminSecurePassword123!
+    volumes:
+      - sqlite_data:/app/db_volume
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/dealers/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:
